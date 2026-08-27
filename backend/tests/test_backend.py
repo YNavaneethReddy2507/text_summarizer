@@ -28,7 +28,7 @@ def test_health_endpoint():
     assert response.status_code == 200
     data = response.json()
     assert data["status"] == "healthy"
-    assert "DocuMind AI" in data["service"]
+    assert "ContextAI" in data["service"]
 
 
 def test_samples_endpoint():

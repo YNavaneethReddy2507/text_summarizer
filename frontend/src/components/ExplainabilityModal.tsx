@@ -32,7 +32,7 @@ export const ExplainabilityModal: React.FC<ExplainabilityModalProps> = ({ isOpen
             </div>
             <div>
               <h3 className="text-lg font-bold text-slate-900 dark:text-white">
-                How DocuMind AI Works: Architecture & Algorithms
+                How ContextAI Works: Architecture & Algorithms
               </h3>
               <p className="text-xs text-slate-500 dark:text-slate-400">
                 Transparent breakdown of our NLP pipeline, graph centrality, and grounded RAG models
@@ -58,7 +58,7 @@ export const ExplainabilityModal: React.FC<ExplainabilityModalProps> = ({ isOpen
               <h4>1. TextRank / LexRank Graph Centrality</h4>
             </div>
             <p className="leading-relaxed">
-              Unlike simplistic truncation, DocuMind constructs a <strong>fully connected graph</strong> where each sentence is a node. Edges represent semantic cosine similarity weighted by TF-IDF token overlap.
+              Unlike simplistic truncation, ContextAI constructs a <strong>fully connected graph</strong> where each sentence is a node. Edges represent semantic cosine similarity weighted by TF-IDF token overlap.
             </p>
             <div className="p-2.5 rounded-lg bg-white dark:bg-slate-900 font-mono text-[11px] text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-800">
               PR(S_i) = (1 - d) + d * Σ [ Sim(S_i, S_j) / Σ Sim(S_j, S_k) * PR(S_j) ]

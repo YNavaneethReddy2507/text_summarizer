@@ -19,7 +19,7 @@ import { Footer } from './components/Footer';
 export function App() {
   // Theme state
   const [darkMode, setDarkMode] = useState<boolean>(() => {
-    const saved = localStorage.getItem('documind_theme');
+    const saved = localStorage.getItem('contextai_theme');
     if (saved) return saved === 'dark';
     return window.matchMedia('(prefers-color-scheme: dark)').matches;
   });
@@ -36,7 +36,7 @@ export function App() {
   const [explainSimply, setExplainSimply] = useState<boolean>(false);
   const [readingSpeedWpm, setReadingSpeedWpm] = useState<number>(220);
   const [aiProvider, setAiProvider] = useState<AIProvider>('local');
-  const [apiKey, setApiKey] = useState<string>(() => localStorage.getItem('documind_apikey') || '');
+  const [apiKey, setApiKey] = useState<string>(() => localStorage.getItem('contextai_apikey') || '');
 
   // Analysis Lifecycle state
   const [isAnalyzing, setIsAnalyzing] = useState<boolean>(false);
@@ -55,19 +55,19 @@ export function App() {
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add('dark');
-      localStorage.setItem('documind_theme', 'dark');
+      localStorage.setItem('contextai_theme', 'dark');
     } else {
       document.documentElement.classList.remove('dark');
-      localStorage.setItem('documind_theme', 'light');
+      localStorage.setItem('contextai_theme', 'light');
     }
   }, [darkMode]);
 
   // Sync API Key
   useEffect(() => {
     if (apiKey) {
-      localStorage.setItem('documind_apikey', apiKey);
+      localStorage.setItem('contextai_apikey', apiKey);
     } else {
-      localStorage.removeItem('documind_apikey');
+      localStorage.removeItem('contextai_apikey');
     }
   }, [apiKey]);
 
@@ -189,7 +189,7 @@ export function App() {
     try {
       const blob = await api.exportAnalysis({
         format,
-        title: `DocuMind Analysis: ${analysisResult.filename}`,
+        title: `ContextAI Analysis: ${analysisResult.filename}`,
         filename: analysisResult.filename.replace(/\.[^/.]+$/, ''),
         summary: analysisResult.summary,
         simplified_summary: analysisResult.simplified_summary,
@@ -203,7 +203,7 @@ export function App() {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `DocuMind_Summary_${analysisResult.filename.replace(/\.[^/.]+$/, '')}.${format === 'markdown' ? 'md' : format}`;
+      a.download = `ContextAI_Summary_${analysisResult.filename.replace(/\.[^/.]+$/, '')}.${format === 'markdown' ? 'md' : format}`;
       document.body.appendChild(a);
       a.click();
       window.URL.revokeObjectURL(url);

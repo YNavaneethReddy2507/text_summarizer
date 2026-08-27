@@ -9,10 +9,10 @@ export const Footer: React.FC = () => {
         {/* Brand */}
         <div className="flex items-center gap-2">
           <div className="w-6 h-6 rounded-lg bg-gradient-to-tr from-violet-600 to-indigo-500 flex items-center justify-center text-white text-[10px] font-bold">
-            DM
+            CA
           </div>
           <span className="font-semibold text-slate-800 dark:text-slate-200">
-            DocuMind AI
+            ContextAI
           </span>
           <span>— Intelligent Document Summarization & NLP Suite</span>
         </div>

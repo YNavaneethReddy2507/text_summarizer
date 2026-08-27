@@ -6,7 +6,7 @@ from fastapi.responses import JSONResponse
 from app.api.endpoints import router as api_router
 
 app = FastAPI(
-    title="DocuMind AI — AI Text Reader, Analyzer & Summarizer",
+    title="ContextAI — AI Text Reader, Analyzer & Summarizer",
     description="Intelligent Document Intelligence & NLP System with Multi-format Extraction, Multi-mode Summarization, RAG Q&A, and Analytics.",
     version="1.0.0"
 )
@@ -39,7 +39,7 @@ app.include_router(api_router, prefix="/api")
 @app.get("/")
 async def root():
     return {
-        "app": "DocuMind AI API",
+        "app": "ContextAI API",
         "tagline": "Read Less. Understand More.",
         "status": "online",
         "docs_url": "/docs"

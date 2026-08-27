@@ -1,4 +1,4 @@
-# DocuMind AI — AI Text Reader, Analyzer & Summarizer
+# ContextAI — AI Text Reader, Analyzer & Summarizer
 
 > **Read Less. Understand More.**  
 > An enterprise-grade AI Document Intelligence suite that ingests multi-format documents (PDF, DOCX, TXT, MD), performs deep NLP analysis (Graph Centrality, TF-IDF, Flesch-Kincaid Readability), generates multi-mode summaries, enables grounded RAG Q&A with citations, and synthesizes audio voice summaries using Text-to-Speech (TTS).

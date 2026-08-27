@@ -46,7 +46,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div>
             <div className="flex items-center gap-1.5">
               <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
-                DocuMind<span className="text-violet-600 dark:text-violet-400">.AI</span>
+                Context<span className="text-violet-600 dark:text-violet-400">AI</span>
               </span>
               <span className="px-1.5 py-0.5 text-[10px] font-semibold bg-violet-100 dark:bg-violet-950/80 text-violet-700 dark:text-violet-300 rounded border border-violet-200 dark:border-violet-800">
                 PRO NLP

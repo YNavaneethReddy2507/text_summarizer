@@ -305,7 +305,7 @@ async def health_check():
     """Health check endpoint."""
     return {
         "status": "healthy",
-        "service": "DocuMind AI Backend",
+        "service": "ContextAI Backend",
         "version": "1.0.0",
         "nlp_engine": "TextRank / LexRank / TF-IDF / RAG",
         "providers_supported": ["local", "gemini", "openai", "groq"]

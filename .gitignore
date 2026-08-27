@@ -27,6 +27,8 @@ wheels/
 .pytest_cache/
 .coverage
 htmlcov/
+*.db
+
 
 # Node & Frontend
 node_modules/
